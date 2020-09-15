@@ -1,0 +1,6 @@
+#Files to ignore
+*.py[co]
+
+#Folers to ignore
+
+__pycache__/

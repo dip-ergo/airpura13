@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Syncoria Inc. (<https://www.syncoria.com>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+
+
+<odoo>
+    <data noupdate='1'>
+        <record forcecreate= "True" id="product_delivery_canada_post" model="product.product">
+            <field name="name">Delivery by Canada Post</field>
+            <field name="default_code">Delivery</field>
+            <field name="type">service</field>
+            <!-- <field name="taxes_id">None</field> -->
+            <field name="standard_price">10.0</field>
+            <field name="list_price">10.0</field>
+        </record>
+
+        <record forcecreate= "True" id="canada_post_shipping_integration" model="delivery.carrier">
+            <field name="name">Canada Post Delivery</field>
+            <field name="delivery_type">canada_post</field>
+            <field name="product_id" ref="product_delivery_canada_post"></field>
+            <field name="canpost_service_type" ref="capost_service_RP"/>
+            <field name="packaging_id" ref="canada_post_package_CP"/>
+            <field name="extra_service_price">10</field>
+            <field name="void_shipment">True</field>
+            <field name="uom_id" ref='uom.product_uom_kgm'/>
+            <field name='delivery_uom'>KG</field>
+            <field name="image" type="base64" file="canada_post_shipping_integration/static/src/img/logo.png"/>
+        </record>
+
+        <record id="base.user_root" model="res.users">
+            <field name="groups_id" eval="[
+            (4, ref('base.group_multi_currency')),
+            (4, ref('stock.group_tracking_lot')),
+            (4, ref('stock.group_stock_manager')),
+            (4, ref('product.group_stock_packaging')),
+            (4, ref('product.group_sale_pricelist')),
+            ]"/>
+        </record>
+        <record id="base.group_user" model="res.groups">
+            <field name="name">Packaging</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('stock.group_tracking_lot'))]"></field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,667 @@
+<html>
+ <body>
+  <section class="oe_container oe_dark lead">
+   <section class="oe_container oe_dark lead">
+    <h2>
+     <font>
+      <p class=" text-center">
+       <b>
+        Odoo Canada Post Shipping Integration
+       </b>
+       <br/>
+       Odoo E-Commerce Extension Providing In Depth Integration With Canada Post
+      </p>
+     </font>
+    </h2>
+    <div class="oe_row">
+     <p>
+      <b>
+       While using the module please ensure these things:
+      </b>
+     </p>
+     <ul>
+      <li>
+       Valid Credentials.
+      </li>
+      <li>
+       None-Zero Amount Of Weight.
+      </li>
+      <li>
+       Valid Address For User/Partner [Street, City, Zip, State Code, Country Code, Phone ].
+      </li>
+      <li>
+       Valid Canada Address For Warehouse [Street, City, Zip, State Code, Country Code, Phone ].
+      </li>
+     </ul>
+    </div>
+    <div class="oe_row">
+     <div class="oe_span12">
+      <div class="panel panel-primary" id="wkid0">
+       <div class="panel-heading">
+        <h3 class="panel-title" style="font-size: 25px;">
+         <i class="fa fa-mail-forward ">
+         </i>
+         <b>
+          This Extension Allows
+         </b>
+        </h3>
+       </div>
+       <div class="panel-body">
+        <ul class="list-unstyled">
+         <li>
+          <i class="fa fa-check">
+          </i>
+          Real-time Shipping Rate Calculation [From BackEnd as well Website Also].
+         </li>
+         <li>
+          <i class="fa fa-check">
+          </i>
+          Contract Shipping Label Generation.
+         </li>
+         <li>
+          <i class="fa fa-check">
+          </i>
+          Non-Contract Shipping Label Generation.
+         </li>
+         <li>
+          <i class="fa fa-check">
+          </i>
+          Live Shipment Tracking Number.
+         </li>
+         <li>
+          <i class="fa fa-check">
+          </i>
+          Generate Return Label for both Contract and Non-Contract Shipping.
+         </li>
+         <li>
+          <i class="fa fa-check">
+          </i>
+          Compatible With All Version Of Odoo.
+         </li>
+         <li>
+          <span class="">
+           <b>
+            Full Admin Control
+           </b>
+          </span>
+          <ul class="list-unstyled">
+           <li class="">
+            <i class="fa fa-hand-o-right">
+            </i>
+            Admin can
+            <b>
+             Add Extra Service Charges
+            </b>
+            on actual shipping price.
+           </li>
+           <li class="">
+            <i class="fa fa-hand-o-right ">
+            </i>
+            Admin can
+            <b>
+             Define/Update New Service
+            </b>
+            as per their preferences.
+           </li>
+           <li class="">
+            <i class="fa fa-hand-o-right">
+            </i>
+            Admin can
+            <b>
+             Define/Update Packaging Type and Pickup Type
+            </b>
+            for  Canada Post shipping.
+           </li>
+           <li class="">
+            <i class="fa fa-hand-o-right">
+            </i>
+            Admin can
+            <b>
+             Define/Update Allowed  Shipping Methods and Unit of Weight
+            </b>
+            for Canada Post shipping.
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <section class="oe_container oe_dark lead">
+   <div class="oe_row">
+    <div class="oe_span12">
+     <div class="panel" id="wkid2">
+      <div class="panel-heading">
+       <h3 class="panel-title" style="font-size: 25px;">
+        <i class="fa fa-wrench ">
+        </i>
+        <b>
+         Setup &amp; Configure
+        </b>
+       </h3>
+      </div>
+      <div class="panel-body">
+       <!-- ############################################################################################## -->
+       <div class="alert alert-success" style="padding:8px;font-weight: 300; font-size: 20px;">
+        <i class="fa fa-cog">
+        </i>
+        <b>
+         Installation
+        </b>
+       </div>
+       <p>
+        <i>
+         This module required the extension of
+                         BackBone Shipping Module.
+        </i>
+       </p>
+       <p>
+        <a href="backbone.png">
+         <img class="oe_picture oe_screenshot" src="backbone.png"/>
+        </a>
+        <a href="img0a.jpg">
+         <img class="oe_picture oe_screenshot" src="img0a.jpg"/>
+        </a>
+       </p>
+       <p>
+       </p>
+       <!-- ############################################################################################## -->
+       <div class="alert alert-success" style="padding:8px;font-weight: 300; font-size: 20px;">
+        <i class="fa fa-cog">
+        </i>
+        <b>
+         Shipping Configuration.
+        </b>
+       </div>
+       <p>
+        <i>
+         After the successful installation of
+                     the Canada Post Shipping Module module you will have to
+                      click the  Delivery Methods menu  under
+                      Inventory -&gt;Delivery-&gt;Delivery Methods.
+        </i>
+       </p>
+       <p>
+        Select Customer Type:
+        <ul>
+         <li>
+          Custom : For Non-Contract Shipping.
+         </li>
+         <li>
+          Commercial : For Contract Shipping.
+         </li>
+         By selecting customer type you can manage Contact and Non-Contact shipping.
+        </ul>
+       </p>
+       <p>
+        Return Label Configuration:
+        <ul>
+         <li>
+          Check
+          <b>
+           Generate Return Label
+          </b>
+          to enable return label generation.
+         </li>
+         <li>
+          Check
+          <b>
+           Return Label Accessible from Customer Portal
+          </b>
+          to enable accessing of return label from customer portal.
+         </li>
+        </ul>
+       </p>
+       <p>
+        <a href="img1a.jpg">
+         <img class="oe_picture oe_screenshot" src="img1a.jpg"/>
+        </a>
+       </p>
+       <p>
+        <i>
+         We have set up the most frequently used values
+         <br/>
+         <b>
+          But  please  look all of them and change according to your needs
+         </b>
+         .
+        </i>
+       </p>
+       <p>
+        <b>
+         Fill these Canada Post Credentials.
+        </b>
+       </p>
+       <ul>
+        <li>
+         Developement Username.
+        </li>
+        <li>
+         Developement Password.
+        </li>
+        <li>
+         Production Username.
+        </li>
+        <li>
+         Production Password.
+        </li>
+       </ul>
+       <p>
+        Environment - Select "Test  Environment" while testing the module flow.
+                      Turn into "Production Environment", when you go live and ready to create real billable labels.
+       </p>
+       <p>
+        <a href="img1b.jpg">
+         <img class="oe_picture oe_screenshot" src="img1b.jpg"/>
+        </a>
+       </p>
+       <p>
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="oe_container oe_dark lead">
+   <div class="oe_row">
+    <div class="oe_span12">
+     <div class="panel" id="wkid3">
+      <div class="panel-heading">
+       <h3 class="panel-title" style="font-size: 25px;">
+        <i class="fa fa-pencil-square-o ">
+        </i>
+        <b>
+         Work-flow
+        </b>
+       </h3>
+      </div>
+      <div class="panel-body">
+       <div class="alert alert-info" style="padding:8px;font-weight: 300; font-size: 20px;">
+        <i class="fa fa-desktop">
+        </i>
+        <b>
+         Canada Post Price Calculator [On BackEnd By Admin]
+        </b>
+       </div>
+       <p>
+        <i>
+         After configuring the Canada Post Shipping
+                 Module  module you will be able to see the Canada Post Delivery in
+                  Delivery Method List[Sale --&gt; Sale Order-&gt;Create].
+        </i>
+       </p>
+       <p>
+        <a href="img2a.jpg">
+         <img class="oe_picture oe_screenshot" src="img2a.jpg"/>
+        </a>
+       </p>
+       <h4>
+       </h4>
+       <p>
+        <b>
+         Now :
+        </b>
+       </p>
+       <p>
+        <ul>
+         <li>
+          Select A customer.
+         </li>
+         <li>
+          Add product in sale oder line.
+         </li>
+         <li>
+          Click Add shipping to add shipping method.
+         </li>
+         <li>
+          Select
+          <b>
+           Canada Post Delivery
+          </b>
+          as  delivery method for this sale order.
+         </li>
+         <li>
+          Click on
+          <b>
+           Get Rate
+          </b>
+          it will list you the delivery charges.
+         </li>
+         <li>
+          Now Click on
+          <b>
+           Add
+          </b>
+          it assign delivery charges in sale order.
+         </li>
+         <li>
+          You can also update the delivery cost after adding it to order.
+         </li>
+        </ul>
+       </p>
+       <p>
+        Wizard for rate calculation, select delivery carrier
+        <b>
+         Get rate
+        </b>
+        and
+        <b>
+         Add
+        </b>
+        to order.
+       </p>
+       <p>
+        <a href="img2b.jpg">
+         <img class="oe_picture oe_screenshot" src="img2b.jpg"/>
+        </a>
+       </p>
+       <p>
+        Update Delivery cost after adding to order by click
+        <b>
+         Update shipping
+        </b>
+       </p>
+       <p>
+        <a href="img2c.jpg">
+         <img class="oe_screenshot oe_picture" src="img2c.jpg"/>
+        </a>
+       </p>
+       <!-- ############### -->
+       <div class="alert alert-info" style="padding:8px;font-weight: 300; font-size: 20px;">
+        <i class="fa fa-desktop">
+        </i>
+        <b>
+         Canada Post Price Calculator  [On FrontEnd By Site User]
+        </b>
+       </div>
+       <p>
+        <i>
+         This module also support the feature of
+         <b>
+          Price Calculation From  Website
+         </b>
+         .
+        </i>
+       </p>
+       <p>
+        <i>
+         On the odoo website user can  see the Canada Post delivery  option in
+                          delivery method List in their cart before making final payment.
+        </i>
+       </p>
+       <div class="col-md-12">
+        <a href="img2d.jpg">
+         <img class="oe_picture oe_screenshot" src="img2d.jpg"/>
+        </a>
+       </div>
+       <p class="text-danger">
+        <b>
+         NOTE:
+        </b>
+        <br/>
+        This delivery charge is combination of actual delivery charges and percentage/fixed amount set in Canada Post delivery configuration.
+       </p>
+       <p>
+        <!-- ############### -->
+       </p>
+       <div class="alert alert-info" style="padding:8px;font-weight: 300; font-size: 20px;">
+        <i class="fa fa-arrow-circle-o-right">
+        </i>
+        <b>
+         Canada Post Label Generator
+        </b>
+       </div>
+       <p class="text-danger">
+        <b>
+         NOTE:
+        </b>
+        <br/>
+       </p>
+       <p class="text-danger">
+        Prior to label generation enable packaging option and assign access of packaging.
+       </p>
+       <p>
+       </p>
+       <p>
+        <a href="img3a.jpg">
+         <img class="oe_picture oe_screenshot" src="img3a.jpg"/>
+        </a>
+        <a href="img3b.jpg">
+         <img class="oe_picture oe_screenshot" src="img3b.jpg"/>
+        </a>
+       </p>
+       <p class="text-danger">
+        <b>
+         NOTE:
+        </b>
+        Firstly you will have to create package of picking
+        <b>
+         before clicking the validate.
+        </b>
+       </p>
+       <p>
+        <i>
+         Now create package by selecting those picking line which  you want to put in
+         <b>
+          single package
+         </b>
+         then click on
+         <b>
+          put in pack
+         </b>
+         .
+        </i>
+       </p>
+       <p>
+        <a href="img3.jpg">
+         <img class="oe_picture oe_screenshot" src="img3.jpg"/>
+        </a>
+       </p>
+       <p>
+        <i>
+         In side the wizard  select the
+         <b>
+          Canada Post Package Type
+         </b>
+         you want to use for this package.
+        </i>
+       </p>
+       <p>
+        <a href="img4.jpg">
+         <img class="oe_picture oe_screenshot" src="img4.jpg"/>
+        </a>
+       </p>
+       <p>
+        <i>
+         Here you can also modify the package
+         <b>
+          Shipping  Weight
+         </b>
+         and also add the cover amount and description of package for future reference.
+        </i>
+       </p>
+       <p>
+        <a href="img5.jpg">
+         <img class="oe_picture oe_screenshot" src="img5.jpg"/>
+        </a>
+       </p>
+       <p>
+        Finally After package generation click on validate/send to shipper.
+       </p>
+       <p>
+        <a href="img10.jpg">
+         <img class="oe_picture oe_screenshot" src="img10.jpg"/>
+        </a>
+       </p>
+       <p>
+        Shipment Label will attach on the message Box.
+       </p>
+       <p>
+        <a href="img12.jpg">
+         <img class="oe_picture oe_screenshot" src="img12.jpg"/>
+        </a>
+       </p>
+       <p>
+        Now download the label from the  message box.
+       </p>
+       <div class="row">
+        <div class="col-11 text-center" style="margin-left: 4%; margin-top:2%; width:94%;">
+         <a href="Label.jpg">
+          <img alt="UPS-Odoo-Shipping-Api-FedEx-UPS-UPS-DHL-UPS-Deomestic-Label" class="col-md-12" src="Label.jpg"/>
+         </a>
+        </div>
+       </div>
+       <p>
+        You can Track your Package from Track button.
+       </p>
+       <p>
+        <a href="img11.jpg">
+         <img class="oe_picture oe_screenshot" src="img11.jpg"/>
+        </a>
+       </p>
+       <!-- ########################## -->
+      </div>
+      <div>
+       <div class="alert alert-info" style="padding:8px;font-weight: 300; font-size: 20px;">
+        <i class="fa fa-arrow-circle-o-right">
+        </i>
+        <b>
+         Canada Post Return Label Generation
+        </b>
+       </div>
+       <p>
+        This module also provide the feature of return label generation.
+        <br/>
+        Thus after receiving shipment if customer want to return its shipment then he/she can download the return label from Customer portal after filing return to attach label on the package and deliver back to Warehouse.
+       </p>
+       <p>
+        <ul>
+         <li>
+          <p>
+           Generate return from validated shipment.
+          </p>
+          <p>
+           <a href="img13.jpg">
+            <img class="oe_picture oe_screenshot" src="img13.jpg"/>
+           </a>
+          </p>
+         </li>
+         <li>
+          <p>
+           Select the quantities to be return among the delivered quantities.
+          </p>
+          <p>
+           <a href="img14.jpg">
+            <img class="oe_picture oe_screenshot" src="img14.jpg"/>
+           </a>
+          </p>
+         </li>
+         <li>
+          <p>
+           Select Canada Post Delivery as carrier for this return shipment.
+          </p>
+          <p>
+           <a href="img15.jpg">
+            <img class="oe_picture oe_screenshot" src="img15.jpg"/>
+           </a>
+          </p>
+         </li>
+         <li>
+          <p>
+           Now create package by clicking Put in pack and then click Print Return Label to generate return label.
+          </p>
+          <p>
+           <a href="img16.jpg">
+            <img class="oe_picture oe_screenshot" src="img16.jpg"/>
+           </a>
+          </p>
+          <p class="text-danger">
+           Note: You can generate return label only for one package. Do not create more than one package for generation of return label.
+          </p>
+         </li>
+         <li>
+          <p>
+           Return label can be downloaded from the message box.
+          </p>
+          <!-- <p>
+                  <a href="">
+                    <img class="oe_picture oe_screenshot" src="" />
+                  </a>
+                </p>
+            </li> -->
+          <li>
+           <p>
+            After generation of return label customer can download this return label fromcustomer portal if Return Label Accessible from Customer Portal field is checked in delivery carrier configuration.
+           </p>
+           <!-- <p>
+                <a href="">
+                    <img class="oe_picture oe_screenshot" src="" />
+                </a>  
+              </p> -->
+          </li>
+          <li>
+           <p>
+            Preview of Return Label
+           </p>
+           <p>
+            <a href="Label.jpg">
+             <img class="oe_picture oe_screenshot" src="Label.jpg"/>
+            </a>
+           </p>
+          </li>
+         </li>
+        </ul>
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <div class="tab-pane active" id="faq">
+  </div>
+  <section class="oe_container lead">
+   <div>
+    <div class="oe_span12 text-center">
+     <h2 class="oe_slogan">
+      Complimentary Support
+     </h2>
+     <p>
+      You will get 90 days free support for any doubt, queries, and bug fixing (excluding data recovery) or any type of issue related to this module.
+     </p>
+    </div>
+   </div>
+   <!-- <div class="oe_span12 text-center">
+    <div class="oe_span12 text-center">
+     <h2 class="text-center oe_slogan">
+      Help and Support
+     </h2>
+    </div>
+    <div class="oe_slogan oe_spaced text-center">
+     <a href="https://webkul.uvdesk.com/en/customer/create-ticket/" onmouseout="this.style.color='#7c7bad'" onmouseover="this.style.color='#AC1EE0'" style="color:#7c7bad;" title="Get Instant Help !">
+      <i class="fa fa-life-ring">
+      </i>
+      Help
+     </a>
+     <a href="https://webkul.uvdesk.com/en/customer/create-ticket/" onmouseout="this.style.color='#7c7bad'" onmouseover="this.style.color='#AC1EE0'" style="color:#7c7bad;" title="Get Instant Support!">
+      <i class="fa fa-ticket">
+      </i>
+      Support
+     </a>
+     <a href="https://webkul.uvdesk.com/en/customer/create-ticket/" onmouseout="this.style.color='#7c7bad'" onmouseover="this.style.color='#AC1EE0'" style="color:#7c7bad;" title="Request Features now !">
+      <i class="fa fa-check-circle">
+      </i>
+      Request new Features
+     </a>
+    </div>
+   </div> -->
+  </section>
+  <section class="oe_container">
+   <!-- <div class="oe_span12">
+    <img alt="" src="http://odooimg.webkul.com/analytics/piwik/piwik.php?idsite=3&amp;rec=1&amp;action_name=CANADA-POST-SHIPPING-INTEGRATION&amp;url=https://apps.openerp.com/apps/modules/13.0/canada_post_shipping_integration&amp;uid=canada_post_shipping_integration" style="border:0"/>
+   </div> -->
+  </section>
+ </body>
+</html>

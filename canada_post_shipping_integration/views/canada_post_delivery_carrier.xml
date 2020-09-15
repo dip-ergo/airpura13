@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Syncoria Inc. (<https://www.syncoria.com>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+
+
+<odoo>
+    <data>
+        <record id="wk_canpost_inherit_view_form" model="ir.ui.view">
+            <field name="name">canpost.delivery.carrier</field>
+            <field name="model">delivery.carrier</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="odoo_shipping_service_apps.view_delivery_carrier_form_inherit_wk_shipping" />     
+            <field name="arch" type="xml">  
+                <xpath expr="//group[@name='Delivery Setting']" col='2' position="after">
+                    <group string="Canada Post Shipping Information" attrs="{'invisible':[('delivery_type', '!=', 'canada_post')]}">
+                        <field name="canpost_service_type" attrs="{'required':[('delivery_type', '=' ,'canada_post')]}"/>
+                        <field name="canpost_option_type" widget="many2many_tags"/>
+                        <field name="canpost_quote_type" attrs="{'required':[('delivery_type', '=' ,'canada_post')]}"/>
+                        <field name="canpost_customer_number" attrs="{'required':[('delivery_type', '=' ,'canada_post')]}" />
+                        <field name="canpost_contract_id" attrs="{'required':[('canpost_quote_type', '=' ,'commercial')], 'invisible':[('canpost_quote_type', '=', 'counter')]}" />
+                        <field name="canpost_promo_code"/>
+			            <field name="canpost_method_of_payment" attrs="{'required':[('canpost_quote_type', '=' ,'commercial')], 'invisible':[('canpost_quote_type', '=', 'counter')]}"/>
+                        <field name="canpost_mailed_on_behalf_of" attrs="{'required':[('canpost_quote_type', '=' ,'commercial')], 'invisible':[('canpost_quote_type', '=', 'counter')]}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="wk_canpost_delivery_carrier_inherit_form" model="ir.ui.view">
+            <field name="name">canpost.delievry.carrier.form</field>
+            <field name="model">delivery.carrier</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Canada Post Credentials" attrs="{'invisible':[('delivery_type', '!=', 'canada_post')]}">
+                        <group>
+                            <group id="developement_credentials">
+                                <field name="canpost_test_username"/>
+                                <field name="canpost_test_password" password="1"/>
+                            </group>
+                            <group id="production_credentials">
+                                <field name="canpost_production_username"/>
+                                <field name="canpost_production_password" password="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="canpost_service_type_form" model="ir.ui.view">
+            <field name="name">canpost.service.type.form</field>
+            <field name="model">canpost.service.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="canpost_services">
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id = "canpost_service_type_tree" model="ir.ui.view">
+            <field name="name">canpost.service.type.form</field>
+            <field name="model">canpost.service.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+    
+        <record id="canpost_option_type_form" model="ir.ui.view">
+            <field name="name">canpost.option.type.form</field>
+            <field name="model">canpost.option.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="canpost_options">
+                            <group>
+                               <field name="name" />
+                               <field name="code" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        
+        <record id="canpost_option_type_tree" model="ir.ui.view">
+            <field name="name">canpost.option.type.tree</field>
+            <field name="model">canpost.option.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_delivery_carrier_canpost_services">
+            <field name="name">Canada Post Service List</field>
+            <field name="res_model">canpost.service.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="canpost_service_type_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_delivery_carrier_canpost_options">
+            <field name="name">Canada Post Options List</field>
+            <field name="res_model">canpost.option.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="canpost_option_type_tree"/>
+        </record>
+
+        <menuitem
+        id="menu_shipping_canpost"
+        name="Canada Post"
+        parent="delivery.menu_delivery"
+        string="Canada Post" />
+         <menuitem
+            id="menu_shipping_canpost_service"
+            parent="canada_post_shipping_integration.menu_shipping_canpost"
+            string="Service Type"
+            action="action_delivery_carrier_canpost_services"/>
+        <menuitem
+            id="menu_shipping_canpost_options"
+            parent="canada_post_shipping_integration.menu_shipping_canpost"
+            string="Option Type"
+            action="action_delivery_carrier_canpost_options" />
+
+    </data>
+</odoo>

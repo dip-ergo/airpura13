@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Syncoria Inc. (<https://www.syncoria.com>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+
+
+<odoo>
+    <data>
+        <record id="view_picking_shipping_search" model="ir.ui.view">
+            <field name="name">stock.picking.canpost.shipping.search</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id"
+                ref="odoo_shipping_service_apps.view_picking_shipping_search"/>
+            <field name="arch" type="xml">
+                <filter  name="draft"  position='after'>
+                    <filter
+                        name="Canada Post"
+                        string="Canada Post"
+                        domain="[('delivery_type','=','canada_post')]"
+                        help="Picking For which Canada Post Shipment is assign "/>
+                </filter>
+            </field>
+        </record>   
+    </data>
+</odoo>

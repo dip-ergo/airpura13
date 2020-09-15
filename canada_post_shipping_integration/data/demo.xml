@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Syncoria Inc. (<https://www.syncoria.com>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+
+
+<odoo>
+    <data noupdate='1'>
+        <record id="base.main_company" model="res.company">
+            <field name="name">Your Company</field>
+            <!-- <field name="is_company">1</field> -->
+            <!-- <field name="supplier">1</field> -->
+            <!-- <field eval="0" name="customer"/> -->
+            <field name="phone">+13123493030</field>
+            <field name="email">xyz@syncoria.com</field>
+            <field name="street">90 Streets Avenue</field>
+            <field name="city">	MANSONVILLE</field>
+            <field name="state_id" model="res.country.state" search="[('name','=','Quebec')]" ></field>
+            <field name="zip">J0E1X0</field>
+            <field name="currency_id" model="res.currency" search="[('name','=','USD')]"/>
+            <field model="res.country" name="country_id" search="[('code','ilike','ca')]"/>
+        </record>
+       <!-- Domestic Customer -->
+        <record id="canpost_demo_customer" model="res.partner">
+            <field name="name">Canada Post customer</field>
+            <!-- <field name="is_company">0</field> -->
+            <!-- <field name="supplier">0</field> -->
+            <!-- <field eval="1" name="customer"/> -->
+            <field name="type">delivery</field>
+            <field name="phone">+13123493030</field>
+            <field name="email">xyz@syncoria.com</field>
+            <field name="street">90 Streets Avenue</field>
+            <field name="city">MANSONVILLE</field>
+            <field name="zip">J0E1X0</field>
+            <field name="state_id" model="res.country.state" search="[('name','=','Quebec')]" ></field>
+            <field model="res.country" name="country_id" search="[('code','ilike','ca')]"/>
+        </record>
+
+        <record forcecreate="True" id="base.user_admin_res_partner" model="res.partner">
+            <field name="child_ids" eval="[(6,0,[ref('canada_post_shipping_integration.canpost_demo_customer')])]"/>
+        </record>
+
+    </data>
+</odoo>

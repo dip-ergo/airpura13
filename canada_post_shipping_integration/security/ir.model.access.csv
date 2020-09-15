@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_canpost_service_users,canpost.service.type,model_canpost_service_type,,1,0,0,0
+access_canpost_service_admin,canpost.service.type,model_canpost_service_type,stock.group_stock_manager,1,1,1,1
+access_canpost_pickup_users,canpost.option.type,model_canpost_option_type,,1,0,0,0
+access_canpost_pickup_admin,canpost.option.type,model_canpost_option_type,stock.group_stock_manager,1,1,1,1
+access_canpost_intended_payment_method_users,canpost.intended.payment.method.type,model_canpost_intended_payment_method,,1,0,0,0
+access_canpost_intended_payment_method_admin,intended.payment.method.type,model_canpost_intended_payment_method,stock.group_stock_manager,1,1,1,1

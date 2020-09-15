@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Syncoria Inc. (<https://www.syncoria.com>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+
+
+<odoo>
+    <data noupdate='1'>
+        <record forcecreate= "True" id= "canada_post_package_CP" model= "product.packaging">
+            <field name='package_carrier_type'>canada_post</field>
+            <field name='qty'>10</field>
+            <field name= "name">Custom Packaging</field>
+            <field name= "shipper_package_code">02</field>
+            <field name= "max_weight">40</field>
+            <field name= "height">10</field>
+            <field name= "width">10</field>
+            <field name= "length">10</field>
+        </record>
+
+        <record forcecreate= "True" id="capost_service_RP" model="canpost.service.type">
+            <field name= "name">Regular Parcel</field>
+            <field name= "code">DOM.RP</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_EP" model="canpost.service.type">
+            <field name= "name">Expedited Parcel</field>
+            <field name= "code">DOM.EP</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_XP" model="canpost.service.type">
+            <field name= "name">Xpresspost</field>
+            <field name= "code">DOM.XP</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_CERT" model="canpost.service.type">
+            <field name= "name">Xpresspost Certified</field>
+            <field name= "code">DOM.XP.CERT</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_PC" model="canpost.service.type">
+            <field name= "name">Priority</field>
+            <field name= "code">DOM.PC</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_LIB" model="canpost.service.type">
+            <field name= "name">Library Materials</field>
+            <field name= "code">DOM.LIB</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_LIB" model="canpost.service.type">
+            <field name= "name">Library Materials</field>
+            <field name= "code">DOM.LIB</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_UEP" model="canpost.service.type">
+            <field name= "name">Expedited Parcel USA</field>
+            <field name= "code">USA.EP</field>
+        </record>
+
+        <record forcecreate= "True" id="canpost_service_UXP" model="canpost.service.type">
+            <field name= "name">Xpresspost USA</field>
+            <field name= "code">USA.XP</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_service_IXP" model="canpost.service.type">
+            <field name="name">Xpresspost International</field>
+            <field name="code">INT.XP</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_service_IPAIR" model="canpost.service.type">
+            <field name="name">International Parcel Air</field>
+            <field name="code">INT.IP.AIR</field>
+        </record>
+<!-- ######################################################################################################### -->
+        <record forcecreate="True" id="canpost_option_SO" model="canpost.option.type">
+            <field name="name">Signature</field>
+            <field name="code">SO</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_option_COD" model="canpost.option.type">
+            <field name="name">COD</field>
+            <field name="code">COD</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_option_PA18" model="canpost.option.type">
+            <field name="name">Proof of Age Required - 18</field>
+            <field name="code">PA18</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_option_PA19" model="canpost.option.type">
+            <field name="name">Proof of Age Required - 19</field>
+            <field name="code">PA19</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_option_HFP" model="canpost.option.type">
+            <field name="name">Card for pickup</field>
+            <field name="code">HFP</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_option_DNS" model="canpost.option.type">
+            <field name="name">Do not safe drop</field>
+            <field name="code">DNS</field>
+        </record>
+
+        <record forcecreate="True" id="canpost_option_LAD" model="canpost.option.type">
+            <field name="name">Leave at door - do not card</field>
+            <field name="code">LAD</field>
+        </record>
+        <record forcecreate="True" id = "canpost_CreditCard" model="canpost.intended.payment.method">
+            <field name = "name">CreditCard</field>
+        </record>
+        <record forcecreate="True" id = "canpost_Account" model="canpost.intended.payment.method">
+            <field name = "name">Account</field>
+        </record>
+        <record forcecreate="True" id = "canpost_SupplierAccount" model="canpost.intended.payment.method">
+            <field name = "name">SupplierAccount</field>
+        </record>
+
+    </data>
+</odoo>
